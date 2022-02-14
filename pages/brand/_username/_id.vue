@@ -1,21 +1,18 @@
 <template>
-  <h1>Index page</h1>
+    <div>brand page</div>
 </template>
-
 <script>
 export default {
-  name: 'IndexPage',
-
-  head() {
+    head() {
       return {
-          title: 'Event Listining - Real World Events',
+          title: 'Olaplex | Mycolors',
           
           meta: [
               {
                   hid: 'description',
                   name: 'description',
                   content: 
-                    'Where you can find all the events taking place in your neighborhood'
+                    'Shop Olaplex at demo Mycolors. Discover the patented salon brand that repairs your hair from chemical, thermal and mechanical dam'
               }
           ]
       }
