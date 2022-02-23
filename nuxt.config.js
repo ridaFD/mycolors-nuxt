@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'mycolors',
+    title: 'My Colors',
     htmlAttrs: {
       lang: 'en',
     },
@@ -10,8 +10,9 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
-        name: 'Demo Mycolors',
-        content: 'Shop best in class haircare, nailcare, skincare, appliances, grooming appliances, makeup, fragrances, and beauty accessories for both men and women.'
+        name: 'Mycolors',
+        content:
+          'Shop best in class haircare, nailcare, skincare, appliances, grooming appliances, makeup, fragrances, and beauty accessories for both men and women.',
       },
       { name: 'format-detection', content: 'telephone=no' },
     ],
@@ -36,8 +37,42 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/i18n', '@nuxtjs/axios'],
 
+  i18n: {
+    locales: ['en', 'ar'],
+    strategy: 'prefix',
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          welcome: 'Welcome',
+        },
+        ar: {
+          welcome: 'مرحبا',
+        },
+      },
+    },
+  },
+
+  axios: {
+    baseURL: 'https://api.mycolors.com/rest', // Used as fallback if no runtime config is provided
+    storeCode: 'kw_en'
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL,
+      https: true
+    }
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
