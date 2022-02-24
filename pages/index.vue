@@ -6,25 +6,25 @@
 export default {
   name: 'IndexPage',
 
-  head() {
-    return {
-      title: this.title + ' | ' + "My Colors",
+  // head() {
+  //   return {
+  //     title: this.title + ' | ' + "My Colors",
 
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Shop Olaplex at Mycolors. Discover the patented salon brand that repairs your hair from chemical, thermal and mechanical damage in three simple steps.',
-        },
-      ],
-    }
-  },
+  //     meta: [
+  //       {
+  //         hid: 'description',
+  //         name: 'description',
+  //         content:
+  //           'Shop Olaplex at Mycolors. Discover the patented salon brand that repairs your hair from chemical, thermal and mechanical damage in three simple steps.',
+  //       },
+  //     ],
+  //   }
+  // },
 
-  computed: {
-    title() {
-      return this.$route.params.username
-    }
-  }
+  // computed: {
+  //   title() {
+  //     return this.$route.params.username
+  //   }
+  // }
 }
 </script>
